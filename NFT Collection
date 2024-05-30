@@ -1,0 +1,36 @@
+const NFTs = [
+    {
+        name: "T-Shirt",
+        size: "Large",
+        properties: "Cotton",
+        color: "Blue",
+        brand: "Nike"
+    }
+];
+
+function mintNFT(nft) {
+    NFTs.push(nft);
+    return nft;
+}
+
+function listNFTs() {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log(NFTs[i]);
+    }
+    console.log("------------------");
+}
+
+function getTotalSupply() {
+    console.log(`Total Supply: ${NFTs.length}`);
+    console.log("------------------");
+}
+
+// Call your functions below this line
+
+listNFTs();
+
+mintNFT({name: "Jeans", size: "Medium", properties: "Denim", color: "Black", brand: "Levi's"});
+mintNFT({name: "Sneaker", size: "US 9", properties: "Canvas", color: "White", brand: "Adidas"});
+mintNFT({name: "Watch", size: "One Size", properties: "Stainless Steel", color: "Silver", brand: "Rolex"});
+listNFTs();
+getTotalSupply();
